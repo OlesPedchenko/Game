@@ -1,13 +1,11 @@
 from random import *
 score = 0
-playing = True
 doors = 0
 print("""
-Gameshow!
+Гра-шоу "Двацять один"!
 ========
-There is a numbers behind 3 doors!
-Guess the correct door to get the biggest score!
-
+За трьома дверима знаходяться числа!
+Відкривайте двері щоб отримати точний результат 21!
      _________          __________           __________
    |           |      |            |       |            |          
    |           |      |            |       |            |        
@@ -17,27 +15,29 @@ Guess the correct door to get the biggest score!
    |           |      |            |       |            |      
    |           |      |            |       |            |        
    | _________ |      | __________ |       | __________ |
-
 """)
 while score < 21:
 
-  print("\nChoose a door (1,2 or 3)")
+    print("\nОбери двері(1,2 or 3)")
 
-  choosendoor = input()
-  choosendoor = int(choosendoor)
+    choosendoor = input()
+    choosendoor = int(choosendoor)
 
-  windoor = randint(1,10)
+    windoor = randint(1, 10)
 
-  print("\nThe coosen door is",choosendoor)
-  print("The score behind the door is",windoor)
+    print("\nОбрані двері мають номер", choosendoor)
+    print("Число за дверима -", windoor)
 
-  score = (score + windoor)
-  doors = (doors + 1)
-  if score > 21:
-   print("\nYour score more than 21")
-  else:
-    print("Your score is",score)
-if score > 20:
-  print("Your opened",doors,"doors to win!")   
+    score = (score + windoor)
+    doors = (doors + 1)
+    if score > 21:
+        print("\nТвій рахунок більше за 21")
+    elif score == 21:
+      print()    
+    else:
+        print("Твій рахунок =", score)
+if score > 21:
+    print("Тобі не вдалося отримати рівно 21")
 if score == 21:
-  print("Exactly result, your score is 21")
+    print("Точний результат, твій рахунок = 21")
+    print("Ти відкрив", doors, "дверей для перемоги!")
