@@ -21,21 +21,50 @@ while score < 21:
     print("\nОбери двері(1,2 or 3)")
 
     choosendoor = input()
-    choosendoor = int(choosendoor)
+    if choosendoor == '1': 
+      windoor = randint(1, 10)
 
-    windoor = randint(1, 10)
+      print("\nОбрані двері мають номер", choosendoor)
+      print("Число за дверима -", windoor)
 
-    print("\nОбрані двері мають номер", choosendoor)
-    print("Число за дверима -", windoor)
-
-    score = (score + windoor)
-    doors = (doors + 1)
-    if score > 21:
-        print("\nТвій рахунок більше за 21")
-    elif score == 21:
-      print()    
-    else:
+      score = (score + windoor)
+      doors = (doors + 1)
+      if score > 21:
+        print("\nТвій рахунок більше за 21, а саме",score)
+      elif score == 21:
+        print()    
+      else:
         print("Твій рахунок =", score)
+    elif choosendoor == "2":
+      windoor = randint(1, 10)
+
+      print("\nОбрані двері мають номер", choosendoor)
+      print("Число за дверима -", windoor)
+
+      score = (score + windoor)
+      doors = (doors + 1)
+      if score > 21:
+        print("\nТвій рахунок більше за 21, а саме",score)
+      elif score == 21:
+        print()    
+      else:
+        print("Твій рахунок =", score)
+    elif choosendoor == '3':
+      windoor = randint(1, 10)
+
+      print("\nОбрані двері мають номер", choosendoor)
+      print("Число за дверима -", windoor)
+
+      score = (score + windoor)
+      doors = (doors + 1)
+      if score > 21:
+        print("\nТвій рахунок більше за 21, а саме",score)
+      elif score == 21:
+        print()    
+      else:
+        print("Твій рахунок =", score) 
+    else:
+      print('Оберіть запропонований варіант')           
 if score > 21:
     print("Тобі не вдалося отримати рівно 21")
 if score == 21:
